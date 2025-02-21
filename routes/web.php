@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PostController; //外部にあるPostCountrollerクラスが使えるようにする
+Route::get('/posts',[PostController::class,'index']);
 /*
 |--------------------------------------------------------------------------
 | Web Routes
