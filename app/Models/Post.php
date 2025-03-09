@@ -10,16 +10,18 @@ class Post extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title' ,
-        'body' ,
+        'title',
+        'body',
     ];
 
-    public function getByLimit(int $limit_count = 10)
+    public function getByLimit(int $limit_count = 3)
     {
         return $this->orderBy('updated_at', 'DESC')->limit($limit_count)->get();
     }
-    public function getPaginateByLimit(int $limit_count = 2)
+
+    public function getPaginateByLimit(int $limit_count = 3)
     {
         return $this->orderBy('updated_at', 'DESC')->paginate($limit_count);
     }
 }
+
