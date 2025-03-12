@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 use Illuminate\Pagination\Paginator;
->>>>>>> dev_basis05
 
 use Illuminate\Support\ServiceProvider;
 
