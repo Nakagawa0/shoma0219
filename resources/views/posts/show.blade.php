@@ -7,6 +7,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
+    <x-app-layout>
     <body>
         <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
         <h1 class="title">
@@ -23,4 +24,5 @@
             <a href="/">戻る</a>
         </div>
     </body>
+    </x-app-layout>
 </html>

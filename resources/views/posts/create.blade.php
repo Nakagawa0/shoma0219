@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Blog</title>
     </head>
+    <x-app-layout>
     <body>
         <h1>Blog Name</h1>
         <form action="/posts" method="POST">
@@ -29,6 +30,7 @@
             <input type="submit" value="保存"/>
         </form>
         <div class="back">[<a href="/">back</a>]</div>
-    </body>    
+    </body> 
+    </x-app-layout> 
 </html>
 
