@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('posts', function (Blueprint $table) {
-            //
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
+            //'category_id'は'categories'テーブルの'id'を参照する外部キー
         });
     }
 
@@ -24,5 +25,13 @@ return new class extends Migration
         Schema::table('posts', function (Blueprint $table) {
             //
         });
+    }
+
+    // Postに対するリレーション
+
+    // 「1対多」の関係なので'posts'と複数形に
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
     }
 };
